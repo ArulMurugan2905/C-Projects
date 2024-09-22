@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int i, n;
+    int max, min;
+    int heights[50];
+
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) {
+        printf("Enter heights[%d] = ", i);
+        scanf("%d", &heights[i]);
+    }
+
+    min = heights[0];
+    max = heights[0];
+
+    for (i = 1; i < n; i++) {
+        if (heights[i] > max) {
+            max = heights[i];
+        }
+        
+        if (heights[i] < min) {
+            min = heights[i];
+        }
+    }
+
+    printf("Max = %d\n", max);
+    printf("Min = %d\n", min);
+
+    return 0;
+}
