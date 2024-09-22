@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+    char op;
+
+    printf("Enter num1: ");
+    scanf("%d", &num1);
+
+    printf("Enter num2: ");
+    scanf("%d", &num2);
+
+    printf("Enter op: ");
+    scanf(" %c", &op);
+
+    if (op == '+') {
+        printf("Add: %d\n", num1 + num2);
+    } else if (op == '-') {
+        printf("Sub: %d\n", num1 - num2);
+    } else if (op == '*') {
+        printf("Mul: %d\n", num1 * num2);
+    } else if (op == '/') {
+        if (num2 != 0) {
+            printf("Div: %.3f\n", (float)num1 / num2);
+        } else {
+            printf("Error: Division by zero\n");
+        }
+    } else {
+        printf("Something went wrong\n");
+    }
+
+    return 0;
+}
